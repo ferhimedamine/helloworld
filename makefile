@@ -8,8 +8,8 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v html:/app \
-		tutum/apache-php
+		-v html/:/var/www/html/ \
+		eboraas/apache
 
 cleanup:
 	docker stop jobx || true && docker rm -f jobx || true
