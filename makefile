@@ -12,7 +12,4 @@ run:
 		tutum/apache-php
 
 cleanup:
-	app="jobx" \
-	if docker ps | grep $app | wc -l; then \
-	  docker stop "$app" && docker rm -f "$app" \
-	fi
+	docker stop jobx || true && docker rm -f jobx || true
