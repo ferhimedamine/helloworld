@@ -11,5 +11,8 @@ run:
 		-v /var/jenkins_home/workspace/jobx/html/:/var/www/html/ \
 		eboraas/apache
 
+build:
+	docker build -t ferhimedamine/jenkins:latest .
+	
 cleanup:
 	docker stop jobx || true && docker rm -v -f jobx || true
