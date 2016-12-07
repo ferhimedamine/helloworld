@@ -13,6 +13,6 @@ run:
 
 cleanup:
 	app="jobx" \
-	if docker ps | awk -v app="app" 'NR>1{  ($(NF) == app )  }'; then \
+	if docker ps | grep $app | wc -l; then \
 	  docker stop "$app" && docker rm -f "$app" \
 	fi
