@@ -8,7 +8,7 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v html/:/var/www/html/ \
+		-v html:/var/www/html \
 		eboraas/apache
 
 cleanup:
