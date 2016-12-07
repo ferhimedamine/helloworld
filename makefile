@@ -8,7 +8,7 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v $(PWD)/html/:/var/www/html/ \
+		-v /var/jenkins_home/workspace/jobx/html/:/var/www/html/ \
 		eboraas/apache
 
 cleanup:
