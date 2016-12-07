@@ -8,5 +8,5 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v `pwd`:/app \
+		-v ./html:/app \
 		tutum/apache-php
