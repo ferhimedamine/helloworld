@@ -8,11 +8,10 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v /var/jenkins_home/workspace/jobx/html/:/var/www/html/ \
-		eboraas/apache
+		ferhimedamine/apache
 
 build:
-	docker build -t ferhimedamine/jenkins:latest .
+	docker build -t ferhimedamine/apache:latest .
 	
 cleanup:
 	docker stop jobx || true && docker rm -v -f jobx || true
