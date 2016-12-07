@@ -12,4 +12,4 @@ run:
 		eboraas/apache
 
 cleanup:
-	docker stop jobx || true && docker rm -f jobx || true
+	docker stop jobx || true && docker rm -f jobx || true && docker rm -v jobx || true
