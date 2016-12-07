@@ -10,3 +10,7 @@ run:
 		-d -p 80:80 \
 		-v ./html:/app \
 		tutum/apache-php
+
+cleanup:
+	docker stop jobx
+	docker rm jobx
