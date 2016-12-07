@@ -8,7 +8,7 @@ help:
 run:
 	docker run --name jobx \
 		-d -p 80:80 \
-		-v ./html:/app \
+		-v html:/app \
 		tutum/apache-php
 
 cleanup:
